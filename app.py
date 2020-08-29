@@ -1,10 +1,12 @@
 from flask import Flask,render_template,url_for,request
 import pandas as pd 
+import numpy as np
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.externals import joblib
 import pickle
+import flask
 
 
 filename ='pickle.pkl'

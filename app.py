@@ -11,7 +11,7 @@ filename ='pickle.pkl'
 clf = pickle.load(open(filename,'rb'))
 vectorizer=pickle.load(open('tranformer.pkl','rb'))
 
-app = Flask(__name__, template_folder='template', static_folder='static')
+app = Flask(__name__, template_folder='template', static_folder='/home/timon007/Desktop/Data Analysis with python UDEMY/NLP/spam classifier/static/static')
 @app.route('/')
 def home():
 	return render_template('home.html')
@@ -26,4 +26,4 @@ def predict():
 	return render_template('result.html',prediction = my_prediction)
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run()

@@ -9,11 +9,12 @@ import pickle
 import flask
 
 
+
 filename ='pickle.pkl'
 clf = pickle.load(open(filename,'rb'))
 vectorizer=pickle.load(open('tranformer.pkl','rb'))
 
-app = Flask(__name__, template_folder='template', static_folder='/home/timon007/Desktop/Data Analysis with python UDEMY/NLP/spam classifier/static/static')
+app = Flask(__name__, template_folder='template')
 @app.route('/')
 def home():
 	return render_template('home.html')
